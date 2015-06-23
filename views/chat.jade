@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        title Realtime Chat com Node.js, Express e Socket.io
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+        link(rel='stylesheet', href='chat.css')
+
+        script(src='https://code.jquery.com/jquery-1.11.0.min.js')
+        script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+        script(src='/socket.io/socket.io.js')
+        script(src='chat.js')
+
+    body
+        div.container-fluid#main
+            div.page-header.text-center
+                h1 Realtime Chat com Node.js, Express e Socket.io
+
+
+            div#form-nickname.row
+                div.text-center.col-sm-12.col-md-6.col-md-offset-3
+                    h3 Choose a name
+                    form
+                        div.form-group
+                            input(type='text')#nickname.form-control(placeholder="Nickname...")    
+                        button.btn.btn-primary#go-chat(data-loading-text="Loading...") Go chat
+
+
+            div#chat.row
+                div.col-sm-12.col-md-12
+                    div.panel.panel-default
+                        div.panel-body
+                            div#chat-container
+                    div.row
+                        form.form-chat.col-sm-12
+                            div.form-group.col-xs-12.col-sm-10.col-lg-11
+                                input(type='text')#message.form-control(placeholder="message ...")
+                            button.btn.btn-primary.col-sm-2.col-lg-1#submit Send
+                        p.col-xs-12.col-md-12 Online user(s): 
+                                span.online-users

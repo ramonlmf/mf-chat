@@ -1,0 +1,66 @@
+#form-nickname {
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+#form-nickname #go-chat{
+  width:100%
+}
+
+#chat {
+  display:none;
+}
+
+#chat-container {
+  height:400px;
+}
+#chat-container .row {
+  margin:0;
+}
+
+.nicescroll-rails {
+  padding-left:23px;
+}
+
+.message {
+  overflow: hidden;
+  padding: 12px;
+  background: #f0f0f0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+  float:left;
+}
+.message.me {
+  color:#fff;
+  background:#0085fe;
+  text-align:right;
+
+  float:right;
+}
+
+@media (max-width: 767px) {
+    #chat-container {
+      height:200px;
+    }
+
+    .form-chat .col-xs-12 {
+        padding: 0;
+    }
+
+    .form-chat {
+        margin-bottom:15px;
+    }
+
+    #submit {
+        width:100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-chat .col-sm-10 {
+        padding-left:0;
+    }
+}
